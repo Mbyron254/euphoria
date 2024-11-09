@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { 
   SiBitcoin,
   SiEthereum,
@@ -43,14 +44,14 @@ export default function Dashboard() {
           >
             <FaChevronLeft className="h-6 w-6 text-gray-600 dark:text-gray-300" />
           </button>
-          <a href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
               <span className="text-xl font-bold text-white">X</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               X-Coin
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="relative">
@@ -81,7 +82,7 @@ export default function Dashboard() {
               {menuItems.map((section, idx) => (
                 <div key={idx} className="py-1">
                   {section.items.map((item, itemIdx) => (
-                    <a 
+                    <Link
                       key={itemIdx}
                       href={item.href} 
                       className={`group flex items-center px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700/50 ${ 'text-gray-700 dark:text-gray-300'}`}
@@ -90,7 +91,7 @@ export default function Dashboard() {
                         {item.icon}
                       </span>
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               ))}
@@ -123,7 +124,7 @@ export default function Dashboard() {
         </div>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-        <a href="https://www.kraken.com/" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 hover:-translate-y-1.5 transition-all duration-300">
+        <Link href="https://www.kraken.com/" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 hover:-translate-y-1.5 transition-all duration-300">
           <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
           <div className="absolute -inset-3 bg-blue-500/20 blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
           <div className="relative flex flex-col items-center">
@@ -132,9 +133,9 @@ export default function Dashboard() {
             </svg>
             <span className="text-sm text-white font-medium tracking-wide">Buy Crypto</span>
           </div>
-        </a>
+        </Link>
         
-        <a href="/dashboard/recieve" className="group relative overflow-hidden bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-purple-500/25 hover:-translate-y-1.5 transition-all duration-300">
+        <Link href="/dashboard/recieve" className="group relative overflow-hidden bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-purple-500/25 hover:-translate-y-1.5 transition-all duration-300">
           <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
           <div className="absolute -inset-3 bg-purple-500/20 blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
           <div className="relative flex flex-col items-center">
@@ -143,9 +144,9 @@ export default function Dashboard() {
             </svg>
             <span className="text-sm text-white font-medium tracking-wide">Receive</span>
           </div>
-        </a>
+        </Link>
 
-        <a href="/dashboard/swap" className="group relative overflow-hidden bg-gradient-to-br from-pink-500 to-pink-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-pink-500/25 hover:-translate-y-1.5 transition-all duration-300">
+        <Link href="/dashboard/swap" className="group relative overflow-hidden bg-gradient-to-br from-pink-500 to-pink-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-pink-500/25 hover:-translate-y-1.5 transition-all duration-300">
           <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
           <div className="absolute -inset-3 bg-pink-500/20 blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
           <div className="relative flex flex-col items-center">
@@ -154,9 +155,9 @@ export default function Dashboard() {
             </svg>
             <span className="text-sm text-white font-medium tracking-wide">Swap</span>
           </div>
-        </a>
+        </Link>
 
-        <a href="/dashboard/send" className="group relative overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 hover:-translate-y-1.5 transition-all duration-300">
+        <Link href="/dashboard/send" className="group relative overflow-hidden bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 hover:-translate-y-1.5 transition-all duration-300">
           <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
           <div className="absolute -inset-3 bg-indigo-500/20 blur-2xl group-hover:blur-3xl transition-all duration-300"></div>
           <div className="relative flex flex-col items-center">
@@ -165,7 +166,7 @@ export default function Dashboard() {
             </svg>
             <span className="text-sm text-white font-medium tracking-wide">Send</span>
           </div>
-        </a>
+        </Link>
       </div>
 
       <div className="bg-white dark:bg-gray-800/50 rounded-2xl p-6 shadow-lg">
