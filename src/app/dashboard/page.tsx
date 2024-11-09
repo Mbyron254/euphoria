@@ -84,7 +84,7 @@ export default function Dashboard() {
                     <a 
                       key={itemIdx}
                       href={item.href} 
-                      className={`group flex items-center px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700/50 ${item?.className || 'text-gray-700 dark:text-gray-300'}`}
+                      className={`group flex items-center px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700/50 ${ 'text-gray-700 dark:text-gray-300'}`}
                     >
                       <span className="mr-3 text-gray-400 group-hover:text-gray-500">
                         {item.icon}
