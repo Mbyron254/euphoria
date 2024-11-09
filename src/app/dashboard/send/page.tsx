@@ -119,7 +119,7 @@ export default function SendPage() {
       setAddress("");
       setIsModalOpen(false);
       setShowError(false);
-    } catch (error) {
+    } catch {
       setShowError(true);
     } finally {
       setIsLoading(false);
